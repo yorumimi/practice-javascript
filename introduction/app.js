@@ -40,7 +40,7 @@ const movies = [
         title: 'Zootopia',
         score: 100,
         year: 2016
-    }
+    },
     {
         title: 'Tangled',
         score: 98,
@@ -150,3 +150,15 @@ const sum4 = evens.reduce((sum, num) => {return  sum + num;}); //20
 
 //初期値を与えることができる
 const sum5 = evens.reduce((sum, num) => {return  sum + num;}, 100); //120
+
+// パラメータのの分割代入
+movies.map(movie => {
+    return `${movie.title}(${(movie.year)}): ${movie.score}/100`;
+})
+
+// パラメータのの分割代入省略記法
+movies.map(({title, year, score}) => {
+    return `${title}(${(year)}): ${score}/100`;
+})
+
+
